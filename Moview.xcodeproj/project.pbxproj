@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		7542D5D0285CDEAA004AFB3C /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7542D5CF285CDEAA004AFB3C /* BaseTabBarController.swift */; };
+		7542D5D2285D1961004AFB3C /* MovieRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7542D5D1285D1961004AFB3C /* MovieRowCell.swift */; };
+		7542D5D4285D385E004AFB3C /* MoviesPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7542D5D3285D385E004AFB3C /* MoviesPageController.swift */; };
 		757AD802285B92AB009F47B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757AD801285B92AB009F47B3 /* AppDelegate.swift */; };
 		757AD806285B92AB009F47B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757AD805285B92AB009F47B3 /* ViewController.swift */; };
 		757AD80B285B92AD009F47B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 757AD80A285B92AD009F47B3 /* Assets.xcassets */; };
 		757AD80E285B92AD009F47B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 757AD80C285B92AD009F47B3 /* LaunchScreen.storyboard */; };
+		75BA217E285E6AAF00115D7B /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BA217D285E6AAF00115D7B /* VerticalStackView.swift */; };
+		75BA2180285E6C7700115D7B /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BA217F285E6C7700115D7B /* UIView+Layout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7542D5CF285CDEAA004AFB3C /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		7542D5D1285D1961004AFB3C /* MovieRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRowCell.swift; sourceTree = "<group>"; };
+		7542D5D3285D385E004AFB3C /* MoviesPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesPageController.swift; sourceTree = "<group>"; };
 		757AD7FE285B92AB009F47B3 /* Moview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moview.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		757AD801285B92AB009F47B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		757AD805285B92AB009F47B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		757AD80A285B92AD009F47B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		757AD80D285B92AD009F47B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		757AD80F285B92AD009F47B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75BA217D285E6AAF00115D7B /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
+		75BA217F285E6C7700115D7B /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				757AD80C285B92AD009F47B3 /* LaunchScreen.storyboard */,
 				757AD80F285B92AD009F47B3 /* Info.plist */,
 				7542D5CF285CDEAA004AFB3C /* BaseTabBarController.swift */,
+				7542D5D1285D1961004AFB3C /* MovieRowCell.swift */,
+				7542D5D3285D385E004AFB3C /* MoviesPageController.swift */,
+				75BA217D285E6AAF00115D7B /* VerticalStackView.swift */,
+				75BA217F285E6C7700115D7B /* UIView+Layout.swift */,
 			);
 			path = Moview;
 			sourceTree = "<group>";
@@ -135,7 +147,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				757AD806285B92AB009F47B3 /* ViewController.swift in Sources */,
+				75BA217E285E6AAF00115D7B /* VerticalStackView.swift in Sources */,
+				7542D5D2285D1961004AFB3C /* MovieRowCell.swift in Sources */,
 				757AD802285B92AB009F47B3 /* AppDelegate.swift in Sources */,
+				7542D5D4285D385E004AFB3C /* MoviesPageController.swift in Sources */,
+				75BA2180285E6C7700115D7B /* UIView+Layout.swift in Sources */,
 				7542D5D0285CDEAA004AFB3C /* BaseTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

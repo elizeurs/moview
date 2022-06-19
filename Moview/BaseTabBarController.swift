@@ -34,11 +34,11 @@ class BaseTabBarController: UITabBarController {
   }
 }
 
-class MoviesPageController: UIViewController {
-    override func viewDidLoad() {
-        view.backgroundColor = .systemGreen
-    }
-}
+//class MoviesPageController: UIViewController {
+//    override func viewDidLoad() {
+//        view.backgroundColor = .systemGreen
+//    }
+//}
 
 class MoviesSearchController: UIViewController {
     override func viewDidLoad() {
