@@ -10,6 +10,9 @@ import UIKit
 class MoviesSearchController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   
   fileprivate let cellId = "id1234"
+  fileprivate var movies = [Movie]()
+  
+  var timer: Timer?
   
   init() {
     super.init(collectionViewLayout: UICollectionViewFlowLayout())
@@ -51,6 +54,23 @@ extension MoviesSearchController: UISearchBarDelegate {
   
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     print(searchText)
+    
+    timer?.invalidate()
+    
+    timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
+      
+      Service.shared.fetchApps(searchTerm: searchText) { (res, err) in
+        if let err = err {
+          print("Failed to fetch movies:", err)
+          return
+        }
+        
+        self.movies = res?.results ?? []
+        DispatchQueue.main.async {
+          self.collectionView.reloadData()
+        }
+      }
+    })
   }
 }
 
@@ -59,12 +79,16 @@ extension MoviesSearchController  {
     return .init(width: view.frame.width, height: 180)
   }
   
-  override func numberOfSections(in collectionView: UICollectionView) -> Int {
-    return 5
+  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    enterSearchTermLabel.isHidden = movies.count != 0
+    return movies.count
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MoviewRowCell
+    
+    cell.movie = self.movies[indexPath.item]
+    
     return cell
   }
 }
@@ -73,6 +97,7 @@ extension MoviesSearchController {
   private func setupCollectionView() {
     collectionView.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
     collectionView.register(MoviewRowCell.self, forCellWithReuseIdentifier: cellId)
+    collectionView.contentInset = .init(top: 0, left: 32, bottom: 0, right: 0)
     
     collectionView.addSubview(enterSearchTermLabel)
     enterSearchTermLabel.fillSuperview(padding: .init(top: 100, left: 16, bottom: 0, right: 16))

@@ -15,6 +15,16 @@ class Service {
     let urlString = "https://api.themoviedb.org/3/movie/popular?api_key=e0330d7c6c649fe9f0325ddea7eeae4f&language=en-US&page=1"
   }
   
+  func fetchApps(searchTerm: String, completion: @escaping (MovieResponse?,  Error?) -> ()) {
+    print("Fetching movies from Service layer")
+
+    
+  let urlString = "https://api.themoviedb.org/3/search/movie?api_key=e0330d7c6c649fe9f0325ddea7eeae4f&query=\(searchTerm)"
+
+    fetchGenericJSONData(urlString: urlString, completion: completion)
+
+  }
+  
   func fetchGenericJSONData<T: Decodable>(urlString: String, completion: @escaping (T?, Error?) -> ()) {
     guard let url = URL(string: urlString) else { return }
     URLSession.shared.dataTask(with: url) { (data, resp, err) in

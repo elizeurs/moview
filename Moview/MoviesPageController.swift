@@ -27,7 +27,7 @@ class MoviesPageController: UICollectionViewController, UICollectionViewDelegate
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    navigationItem.title = "Now Playing"
+    navigationItem.title = "Moview"
     navigationController?.navigationBar.prefersLargeTitles = true
     setupCollectionView()
     fetchData()
