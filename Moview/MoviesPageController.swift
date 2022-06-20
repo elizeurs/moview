@@ -23,21 +23,16 @@ class MoviesPageController: UICollectionViewController, UICollectionViewDelegate
     super.viewDidLoad()
     navigationItem.title = "Now Playing"
     navigationController?.navigationBar.prefersLargeTitles = true
-    setup()
+    setupCollectionView()
   }
 }
 
 extension MoviesPageController {
-  private func setup() {
-    setupCollectionView()
-  }
-  
   private func setupCollectionView() {
     // #colorLiteral(
     collectionView.backgroundColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
     collectionView.register(MoviewRowCell.self, forCellWithReuseIdentifier: cellId)
     collectionView.contentInset = .init(top: 0, left: 32, bottom: 0, right: 0)
-    
     
   }
 }
