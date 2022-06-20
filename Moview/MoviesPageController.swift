@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MoviesPageController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
   
   let cellId = "cellId"
+  
+  var movies = [Movie]()
   
   init() {
     super.init(collectionViewLayout: UICollectionViewFlowLayout())
@@ -24,6 +27,7 @@ class MoviesPageController: UICollectionViewController, UICollectionViewDelegate
     navigationItem.title = "Now Playing"
     navigationController?.navigationBar.prefersLargeTitles = true
     setupCollectionView()
+    fetchData()
   }
 }
 
@@ -39,16 +43,37 @@ extension MoviesPageController {
 
 extension MoviesPageController {
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 5
+    return movies.count
   }
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell  = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MoviewRowCell
+    
+    cell.movie = self.movies[indexPath.item]
+//    cell.imageView.sd_setImage(with: URL(string: movie.posterPath))
     return cell
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return .init(width: view.frame.width, height: 200)
+  }
+}
+
+extension MoviesPageController {
+  fileprivate func fetchData() {
+    let urlString = "https://api.themoviedb.org/3/movie/popular?api_key=e0330d7c6c649fe9f0325ddea7eeae4f&language=en-US&page=1"
+    Service.shared.fetchGenericJSONData(urlString: urlString) { (movieResponse: MovieResponse?, err) in
+      
+      if let err = err {
+        print("Failed to paginate data:", err)
+        return
+      }
+      
+      self.movies = movieResponse?.results ?? []
+      DispatchQueue.main.async {
+        self.collectionView.reloadData()
+      }
+    }
   }
 }
 

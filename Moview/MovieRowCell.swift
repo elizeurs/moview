@@ -6,8 +6,18 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MoviewRowCell: UICollectionViewCell  {
+  
+  var movie: Movie! {
+    didSet {
+      imageView.sd_setImage(with: URL(string: movie.posterPath))
+      nameLabel.text = movie?.title
+      yearLabel.text = movie?.release_date
+      overview.text = movie?.overview
+    }
+  }
   
   let imageView =  UIImageView()
   let nameLabel = UILabel()
@@ -31,7 +41,7 @@ extension MoviewRowCell {
   private func setup() {
     imageView.translatesAutoresizingMaskIntoConstraints = false
     imageView.image = UIImage(named: "filmPoster")
-    imageView.backgroundColor = .systemPurple
+//    imageView.backgroundColor = .systemPurple
     imageView.layer.cornerRadius = 15
     imageView.clipsToBounds = true
     
