@@ -18,6 +18,7 @@
 		75BA217E285E6AAF00115D7B /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BA217D285E6AAF00115D7B /* VerticalStackView.swift */; };
 		75BA2180285E6C7700115D7B /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BA217F285E6C7700115D7B /* UIView+Layout.swift */; };
 		75D69260286034070044DBA6 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D6925F286034070044DBA6 /* MovieResponse.swift */; };
+		75D69262286037B20044DBA6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D69261286037B20044DBA6 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		75BA217D285E6AAF00115D7B /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
 		75BA217F285E6C7700115D7B /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		75D6925F286034070044DBA6 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		75D69261286037B20044DBA6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				75BA217F285E6C7700115D7B /* UIView+Layout.swift */,
 				75B63B94285FCD5A0040FDD6 /* MoviesSearchController.swift */,
 				75D6925F286034070044DBA6 /* MovieResponse.swift */,
+				75D69261286037B20044DBA6 /* Service.swift */,
 			);
 			path = Moview;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				75B63B95285FCD5A0040FDD6 /* MoviesSearchController.swift in Sources */,
 				7542D5D4285D385E004AFB3C /* MoviesPageController.swift in Sources */,
 				75D69260286034070044DBA6 /* MovieResponse.swift in Sources */,
+				75D69262286037B20044DBA6 /* Service.swift in Sources */,
 				75BA2180285E6C7700115D7B /* UIView+Layout.swift in Sources */,
 				7542D5D0285CDEAA004AFB3C /* BaseTabBarController.swift in Sources */,
 			);
