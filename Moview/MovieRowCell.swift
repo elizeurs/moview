@@ -58,7 +58,7 @@ extension MoviewRowCell {
     overview.translatesAutoresizingMaskIntoConstraints = false
     overview.font = UIFont.systemFont(ofSize: 13, weight: .regular)
     overview.text = "Astronauts who have seen the Earth from space have often described the 'Overview Effect', an experience that has transformed their perspective of the planet and mankind's place upon it, and enabled them to perceive it as our shared home, without boundaries between nations or species."
-    overview.numberOfLines =  0
+    overview.numberOfLines =  8
     
 //    VStackView.translatesAutoresizingMaskIntoConstraints = false
 //    VStackView.axis = .vertical
