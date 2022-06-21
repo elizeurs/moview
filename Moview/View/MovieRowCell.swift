@@ -41,9 +41,9 @@ extension MoviewRowCell {
   private func setup() {
     imageView.translatesAutoresizingMaskIntoConstraints = false
     imageView.image = UIImage(named: "filmPoster")
-//    imageView.backgroundColor = .systemPurple
-    imageView.layer.cornerRadius = 15
     imageView.clipsToBounds = true
+    imageView.layer.cornerRadius = 10
+
     
     nameLabel.translatesAutoresizingMaskIntoConstraints = false
     nameLabel.font = UIFont.systemFont(ofSize: 15, weight: .bold)

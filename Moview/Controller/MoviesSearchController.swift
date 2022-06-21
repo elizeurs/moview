@@ -95,7 +95,7 @@ extension MoviesSearchController  {
 
 extension MoviesSearchController {
   private func setupCollectionView() {
-    collectionView.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+    collectionView.backgroundColor = .systemBackground
     collectionView.register(MoviewRowCell.self, forCellWithReuseIdentifier: cellId)
     collectionView.contentInset = .init(top: 0, left: 32, bottom: 0, right: 0)
     
